@@ -1,11 +1,18 @@
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}',
-  ],
+  mode: 'jit', // faster just-in-time mode
+  content: ['./src/**/*.{js,jsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#202225',
+        secondary: '#5865f2',
+        gray: colors.neutral,
+      },
+    },
   },
   plugins: [],
 };
